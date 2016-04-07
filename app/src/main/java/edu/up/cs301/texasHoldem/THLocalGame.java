@@ -23,6 +23,7 @@ public class THLocalGame extends LocalGame {
      *
      */
     public THLocalGame(){
+
         currentState = new THState();
     }
 
@@ -35,6 +36,7 @@ public class THLocalGame extends LocalGame {
     protected void sendUpdatedStateTo(GamePlayer p) {
 
 
+
     }
 
 
@@ -44,7 +46,13 @@ public class THLocalGame extends LocalGame {
      */
     @Override
     protected boolean canMove(int playerIdx) {
-        return false;
+        if(this.currentState.getCurTurn() == playerIdx){
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
 
@@ -54,8 +62,20 @@ public class THLocalGame extends LocalGame {
      */
     @Override
     protected String checkIfGameOver() {
+        int counter = this.currentState.getPlayerNum();
+        for(int i = 0; i < this.currentState.getPlayerNum(); i++) {
+            if(this.currentState.getPlayer(i).isEliminated() ) {
+                counter--;
+            }
+        }
 
-        return null;
+        if( counter <= 1){
+
+            //TODO : make a game over message
+            return "We have a winner!";
+        }
+
+        return "no winner yet";
     }
 
 
@@ -67,6 +87,7 @@ public class THLocalGame extends LocalGame {
      */
     @Override
     protected boolean makeMove(GameAction action) {
+
         return false;
     }
 }

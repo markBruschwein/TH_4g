@@ -1,4 +1,4 @@
-package edu.up.cs301.game.infoMsg;
+package edu.up.cs301.texasHoldem;
 
 import edu.up.cs301.card.Card;
 
@@ -8,12 +8,10 @@ import edu.up.cs301.card.Card;
 public class player {
     private int money;
     private int curBet;
-
-
-
     private int numBet;
     private Card[] hand = new Card[5];
     private boolean isActive;
+    private boolean isEliminated;
     private Card card1 = null;
     private Card card2 = null;
     private Card card3 = null;
@@ -140,6 +138,14 @@ public class player {
         this.hand[4] = card5;
     }
 
+    public boolean isEliminated() {
+
+        return isEliminated;
+    }
+
+    public void setIsEliminated(boolean isEliminated) {
+        this.isEliminated = isEliminated;
+    }
 
 
 
@@ -147,6 +153,7 @@ public class player {
         money = 1000;
         curBet = 0;
         isActive = true;
+        isEliminated = false;
         isTie = false;
         numBet = 0;
     }

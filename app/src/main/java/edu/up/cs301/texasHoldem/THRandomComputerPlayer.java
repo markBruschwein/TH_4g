@@ -21,6 +21,7 @@ public class THRandomComputerPlayer extends GameComputerPlayer{
     THState state; // Current state that the GUI will use to update
     GameMainActivity activity;  // Will be used to know the current activity
     TextView comPlayerMoney;
+    player playerInfo;
 
     /**
      * The THRandomComputer Player constructor that creates all the instance variables

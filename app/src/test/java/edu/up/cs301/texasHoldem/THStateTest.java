@@ -2,8 +2,6 @@ package edu.up.cs301.texasHoldem;
 
 import org.junit.Test;
 
-import edu.up.cs301.game.infoMsg.player;
-
 import static org.junit.Assert.*;
 
 /**

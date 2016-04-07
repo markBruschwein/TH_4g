@@ -15,9 +15,12 @@ import edu.up.cs301.game.infoMsg.GameInfo;
  * @version 3/30/2016.
  */
 public class THHumanPlayer {
+
+
     THState state; // Current state that the GUI will use to update
     GameMainActivity activity;  // Will be used to know the current activity
     TextView playerMoney;
+    player playerInfo;
 
     /**
      * The THHuman Player constructor that creates all the instance variables
@@ -53,5 +56,29 @@ public class THHumanPlayer {
      */
     public void onClick() {
 
+    }
+
+    public TextView getPlayerMoney() {
+        return playerMoney;
+    }
+
+    public void setPlayerMoney(TextView playerMoney) {
+        this.playerMoney = playerMoney;
+    }
+
+    public GameMainActivity getActivity() {
+        return activity;
+    }
+
+    public void setActivity(GameMainActivity activity) {
+        this.activity = activity;
+    }
+
+    public THState getState() {
+        return state;
+    }
+
+    public void setState(THState state) {
+        this.state = state;
     }
 }

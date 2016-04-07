@@ -2,7 +2,6 @@ package edu.up.cs301.texasHoldem;
 
 import edu.up.cs301.card.Card;
 import edu.up.cs301.game.infoMsg.GameState;
-import edu.up.cs301.game.infoMsg.player;
 
 /**
  * Created by bruschwe18 on 3/16/2016.
@@ -16,7 +15,7 @@ public class THState extends GameState{
     private Card[] cardMid;
     private int playerNum;
     private Deck deck;
-    private edu.up.cs301.game.infoMsg.player[] player;
+    private edu.up.cs301.texasHoldem.player[] player;
 
 
     public THState(){
@@ -401,7 +400,7 @@ public class THState extends GameState{
         return this.cardMid[index];
     }
 
-    public edu.up.cs301.game.infoMsg.player getPlayer(int index) {
+    public edu.up.cs301.texasHoldem.player getPlayer(int index) {
         return player[index];
     }
 
